@@ -129,7 +129,7 @@ header a {color: inherit;}
 /*ロゴ（※画像の場合）*/
 #logo img {
 	display: block;
-	width: 170px;	/*ロゴの幅*/
+	width: 140px;	/*ロゴの幅*/
 }
 
 /*ロゴ（※テキストの場合）*/
@@ -419,7 +419,7 @@ div.padding0 {
 
 /*１枚目画像*/
 .slide1-parts {
-	background: url('../images/top_1.jpg') no-repeat center center / cover;	/*１枚目の背景画像の読み込み*/
+	background: url('../images/ftl_top.jpg') no-repeat center center / cover;	/*１枚目の背景画像の読み込み*/
 }
 
 /*２枚目画像*/
@@ -429,7 +429,7 @@ div.padding0 {
 
 /*３枚目画像*/
 .slide3-parts {
-	background: url('../images/ceosns.JPG') no-repeat center center / cover;	/*３枚目の背景画像の読み込み*/
+	background: url('../images/top_1.jpg') no-repeat center center / cover;	/*３枚目の背景画像の読み込み*/
 }
 
 
@@ -438,7 +438,7 @@ div.padding0 {
 	
 	/*１枚目画像*/
 	.slide1-parts {
-		background-image: url('../images/top_1.jpg');	/*縦向き専用の画像をここで設定します*/
+		background-image: url('../images/ftl_top.jpg');	/*縦向き専用の画像をここで設定します*/
 	}
 
 	/*2枚目画像*/
@@ -448,7 +448,7 @@ div.padding0 {
 
 	/*3枚目画像*/
 	.slide3-parts {
-		background-image: url('../images/ceosns.JPG');	/*縦向き専用の画像をここで設定します*/
+		background-image: url('../images/top_1.jpg');	/*縦向き専用の画像をここで設定します*/
 	}
 
 	}/*追加指定ここまで*/
@@ -2088,7 +2088,7 @@ section {
 }
 
 .keiei-rinen {
-	max-width: 700px; /* 任意で調整可能 */
+	max-width: 800px; /* 任意で調整可能 */
 	margin: 0 auto;
 	text-align: left;
 	padding: 1em;
@@ -2932,3 +2932,53 @@ textarea {
   margin: 0.3em 0;    /* 上下マージンを狭くする */
 }
 
+.business-intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.business-intro > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+/*btn1
+---------------------------------------------------------------------------*/
+a.btn1-parts {
+	display: inline-block;text-decoration: none;
+	letter-spacing: 0.1em;	/*文字間隔を少しだけ広くとる*/
+	border-radius: 3px;		/*角を丸くする指定*/
+	padding: 0.3rem 2rem;	/*上下、左右へのボタン内の余白*/
+	box-shadow: 1px 2px 3px rgba(0,0,0,0.2);	/*ボックスの影。右へ、下へ、ぼかし幅。0,0,0は黒の事で0.2は色が20%出た状態。*/
+	transition: 0.3s;	/*hoverまでにかける時間。0.3秒。*/
+	background: #fff;		/*背景色*/
+	border: 1px solid #ccc;	/*枠線の幅、線種、色*/
+}
+
+/*アイコン*/
+a.btn1-parts i {
+	padding-left: 1em;	/*アイコンとテキストの間の余白*/
+	color: #999;		/*アイコンの色*/
+}
+
+/*マウスオン時*/
+a:hover.btn1-parts {
+	transform: scale(1.03);		/*103%に拡大する*/
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9比率 */
+  height: 0;
+  margin: 2em 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
