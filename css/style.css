@@ -422,15 +422,18 @@ div.padding0 {
 	background: url('../images/ftl_top.jpg') no-repeat center center / cover;	/*１枚目の背景画像の読み込み*/
 }
 
+
 /*２枚目画像*/
 .slide2-parts {
-	background: url('../images/top_2.png') no-repeat center center / cover;	/*２枚目の背景画像の読み込み*/
+	background: url('../images/top_car.jpg') no-repeat center center / cover;	/*２枚目の背景画像の読み込み*/
 }
 
 /*３枚目画像*/
 .slide3-parts {
-	background: url('../images/top_1.jpg') no-repeat center center / cover;	/*３枚目の背景画像の読み込み*/
+	background: url('../images/top_office.jpg') no-repeat center center / cover;	/*３枚目の背景画像の読み込み*/
 }
+
+
 
 
 	/*端末を縦向きにした際に、読み込む画像を変更したい場合はここで指定します*/
@@ -443,12 +446,12 @@ div.padding0 {
 
 	/*2枚目画像*/
 	.slide2-parts {
-		background-image: url('../images/top_2.png');	/*縦向き専用の画像をここで設定します*/
+		background-image: url('../images/top_car.jpg');	/*縦向き専用の画像をここで設定します*/
 	}
 
 	/*3枚目画像*/
 	.slide3-parts {
-		background-image: url('../images/top_1.jpg');	/*縦向き専用の画像をここで設定します*/
+		background-image: url('../images/top_office.jpg');	/*縦向き専用の画像をここで設定します*/
 	}
 
 	}/*追加指定ここまで*/
