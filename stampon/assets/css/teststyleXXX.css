@@ -1,0 +1,16 @@
+/*You can add your won color also */
+/*
+
+a:hover {
+  color: #000000;
+}
+
+
+a {
+  color: #ffffff;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
