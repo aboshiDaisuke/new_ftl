@@ -3,7 +3,7 @@
 header("Content-Type: text/html; charset=UTF-8");
 
 // メール送信先（適宜変更）
-$to = "daboshi@ftl.co.jp";
+$to = "jinji@ftl2.onmicrosoft.com";
 
 // フォームからの入力値を取得（サニタイズ）
 $name = htmlspecialchars($_POST['name'] ?? '', ENT_QUOTES, 'UTF-8');
@@ -19,7 +19,7 @@ $positions = $_POST['desired_position'] ?? [];
 $motivation = htmlspecialchars($_POST['motivation'] ?? '', ENT_QUOTES, 'UTF-8');
 $self_pr = htmlspecialchars($_POST['self_pr'] ?? '', ENT_QUOTES, 'UTF-8');
 $remarks = htmlspecialchars($_POST['remarks'] ?? '', ENT_QUOTES, 'UTF-8');
-
+$wk=implode(', ', array_map('htmlspecialchars', $positions));
 // メールアドレス確認チェック
 if ($email !== $email_confirm) {
     echo "メールアドレスが一致しません。戻って修正してください。";
@@ -45,7 +45,7 @@ $body = <<<EOD
 ■ 学年：{$grade}
 ■ 電話番号：{$phone}
 ■ メールアドレス：{$email}
-■ 希望職種：{implode(', ', array_map('htmlspecialchars', $positions))}
+■ 希望職種：{$wk}
 ■ 志望動機：
 {$motivation}
 
@@ -68,7 +68,7 @@ if ($success) {
 } else {
     echo "送信に失敗しました。しばらくしてから再度お試しください。";
 }
-?>
 
 header("Location: thanks.html");
 exit;
+?>

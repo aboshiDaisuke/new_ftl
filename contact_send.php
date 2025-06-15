@@ -11,7 +11,7 @@ $email    = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
 $message  = htmlspecialchars($_POST['message'], ENT_QUOTES, 'UTF-8');
 
 // メール送信先
-$to = "daboshi@ftl.co.jp";  // ← あなたの受信したいメールアドレスに書き換えてください
+$to = "gyoumu@ftl2.onmicrosoft.com";  // ← あなたの受信したいメールアドレスに書き換えてください
 
 // メール件名と本文
 $subject = "【お問い合わせ】未来技術研究所Webフォームより";
@@ -44,7 +44,7 @@ if (mb_send_mail($to, $subject, $body, $headers)) {
 } else {
   echo "送信に失敗しました。しばらくしてから再度お試しください。";
 }
-?>
 
 header("Location: thanks.html");
 exit;
+?>
